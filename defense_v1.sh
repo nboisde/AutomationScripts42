@@ -6,7 +6,7 @@
 #    By: nboisde <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/10 14:30:33 by nboisde           #+#    #+#              #
-#    Updated: 2020/09/10 15:40:31 by nboisde          ###   ########.fr        #
+#    Updated: 2020/09/10 21:33:23 by nboisde          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,14 @@ echo "Starting Process"
 sleep 1
 find .
 norminette -R CheckForbiddenSourceHeader ./ex*/*.c
-sleep 3
+sleep 2
+echo "executing the comilation"
+sleep 0.1
+echo "."
+sleep 0.5
+gcc -Wall -Werror -Wextra -c ./ex*/*.c
+find .*/*.o
+sleep 1
 cat ./ex*/*.c
 find ./ex*/*.c > tmp.c
 awk '{print "#include \""$0"\""}' tmp.c >> tmp.c
