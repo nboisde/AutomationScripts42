@@ -6,7 +6,7 @@
 #    By: nboisde <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/10 14:30:33 by nboisde           #+#    #+#              #
-#    Updated: 2020/09/10 21:33:23 by nboisde          ###   ########.fr        #
+#    Updated: 2020/09/11 09:35:48 by nboisde          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,4 +32,5 @@ echo "\nint main(void)\n{\n}" >> main.c
 echo "main.c for tests -------------------\n"
 cat main.c
 rm tmp.c
+rm ./*.o
 ls -la
